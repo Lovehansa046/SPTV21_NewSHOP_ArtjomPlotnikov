@@ -10,9 +10,8 @@ import java.util.Scanner;
 
 public class HistoryBuyManager {
 
-    Scanner scanner;
-    public static int TotalSummaProduct;
-    public static int balance;
+    private final Scanner scanner;
+
 
     public HistoryBuyManager() {
         scanner = new Scanner(System.in);
@@ -21,46 +20,47 @@ public class HistoryBuyManager {
     public HistoryBuy BuyProduct(Product[] products, Buyer[] buyers) {
         System.out.println(" Список покупателей: ");
         for (int i = 0; i < buyers.length; i++) {
-            System.out.printf("%d. %s %s. Телефон: %s%n\t"
+            System.out.printf("%d. %s %s. Телефон: %s%n"
                     , i + 1
                     , buyers[i].getFirstname()
                     , buyers[i].getLastname()
                     , buyers[i].getPhone());
         }
-        System.out.println("Выберите покупателя: ");
+        System.out.print("Выберите покупателя: ");
         int Buyer = scanner.nextInt(); scanner.nextLine();
         System.out.println("Список продуктов: ");
         for (int j = 0; j < products.length; j++) {
-            System.out.printf("%s. Название продукта: %s \tКоличество: %s \tЦена продукта: %s"
+            System.out.printf("%d. Название продукта: %s Количество: %s Цена продукта: %s%n"
                     , j + 1
                     , products[j].getTitle()
                     , products[j].getQuantity()
                     , products[j].getPrice());
         }
         System.out.println();
-        System.out.println("Выберите товар: ");
+        System.out.print("Выберите товар: ");
+
         int Product = scanner.nextInt(); scanner.nextLine();
-        System.out.println("Выберите кол-во товара: ");
+
+        System.out.print("Выберите кол-во товара: ");
+
         int QuantityProduct = scanner.nextInt(); scanner.nextLine();
         int a = products[Product - 1].getQuantity();
         int b = products[Product - 1].getPrice();
-        if (QuantityProduct > a) {
-            System.out.println("На складе нет достаточного количества товара!");
-            TotalSummaProduct = b * QuantityProduct;
-            int ark = products[Product - 1].getQuantity() + QuantityProduct;
-            products[Product - 1].setQuantity(ark);
-        } else {
-            TotalSummaProduct = b * QuantityProduct;
+
+        if (QuantityProduct <= a) {
+            int TotalSummaProduct = b * QuantityProduct;
             int ark = products[Product - 1].getQuantity() - QuantityProduct;
             products[Product - 1].setQuantity(ark);
-        }
-        if (TotalSummaProduct > buyers[Buyer - 1].getCash()) {
-            System.out.println("У вас недостаточно средст для совершения данной покупки!");
+            if (TotalSummaProduct > buyers[Buyer - 1].getCash()) {
+                System.out.println("У вас недостаточно средст для совершения данной покупки!");
+            } else {
+                int balance = buyers[Buyer - 1].getCash() - TotalSummaProduct;
+                buyers[Buyer - 1].setCash(balance);
+                System.out.println("Остаток на счету" + balance);
+            }
         } else {
-            balance = buyers[Buyer - 1].getCash() - TotalSummaProduct;
-            buyers[Buyer - 1].setCash(balance);
+            System.out.println("На складе нет достаточного количества товара!");
         }
-        System.out.println("Остаток на счету" + balance);
 
         HistoryBuy historyBuy = new HistoryBuy();
         historyBuy.setProduct(products[Product - 1]);

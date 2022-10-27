@@ -13,11 +13,11 @@ public class BookProductManager {
     }
 
     public Product createBookProduct(){
-        System.out.println("Введите название продукта: ");
+        System.out.print("Введите название продукта: ");
         String productName = scanner.nextLine();
-        System.out.println("Введите количество продуктов: ");
+        System.out.print("Введите количество продуктов: ");
         String quantity = scanner.nextLine();
-        System.out.println("Введите цену продукта: ");
+        System.out.print("Введите цену продукта: ");
         String price = scanner.nextLine();
         Product product =createProduct(productName, Integer.parseInt(quantity), new Integer(price));
         return product;

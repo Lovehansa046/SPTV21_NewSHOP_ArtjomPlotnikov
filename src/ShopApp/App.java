@@ -32,19 +32,24 @@ public class App {
         historyBuyManager = new HistoryBuyManager();
     }
 
-    public void run(){
+    public void run() {
         boolean repeat = true;
-        do{
-            System.out.println("Задачи: ");
-            System.out.println("0. Выйти из программы");
-            System.out.println("1. Добавить продукт");
-            System.out.println("2. Добавить покупателя");
-            System.out.println("3. Список продуктов");
-            System.out.println("4. Список покупателей");
-            System.out.println("5. Купить товар");
-            System.out.println("6. История покупок в магазине");
-            System.out.println("7. Пополнить счет");
-            int task = scanner.nextInt(); scanner.nextLine();
+        do {
+            System.out.println("=======================================");
+            System.out.println("=============== Задачи ================");
+            System.out.println("");
+            System.out.println("===> (0)     Выйти из програм       (0) <===");
+            System.out.println("===> (1)     Добавить продукт       (1) <===");
+            System.out.println("===> (2)    Добавить покупателя     (2) <===");
+            System.out.println("===> (3)     Список продуктов       (3) <===");
+            System.out.println("===> (4)    Список покупателей      (4) <===");
+            System.out.println("===> (5)      Купить товар          (5) <===");
+            System.out.println("===> (6) История покупок в магазине (6) <===");
+            System.out.println("===> (7)     Пополнить счет         (7) <===");
+            System.out.println("===> (8)    Посмотреть баланс       (8) <===");
+            System.out.print("Выберите задачу: ");
+            int task = scanner.nextInt();
+            scanner.nextLine();
             switch (task) {
                 case 0:
                     repeat = false;
@@ -77,12 +82,16 @@ public class App {
                     System.out.println("7. Пополнить счет");
                     buyerManager.Refill(buyers);
                     break;
+                case 8:
+                    System.out.println("8. Посмотреть баланс");
+                    buyerManager.PrintCash(buyers);
 
             }
 
 
-        }while (repeat);
-        System.out.println("");
+        } while (repeat);
+        System.out.println("============> Закрытие программы, пока! <================");
+
     }
     private void addProduct(Product product){
         this.products = Arrays.copyOf(this.products, this.products.length + 1);

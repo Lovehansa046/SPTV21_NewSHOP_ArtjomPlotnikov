@@ -15,27 +15,11 @@ public class BookProduct {
     public void setProducts(Product[] products) {
         this.products = products;
     }
-    public Product addProducts() {
-        Product product = new Product();
-        System.out.println("Введите название продукта");
-        product.setTitle(scanner.nextLine());
-        System.out.println("Введите цену продукта (целыми числами)");
-        product.setPrice(scanner.nextInt());
-        scanner.nextLine();
-        System.out.println("Количество товара");
-        product.setQuantity(scanner.nextInt());
-        scanner.nextLine();
-        return product;
-    }
 
     public BookProduct() {
         products = new Product[0];
     }
-    public void addProduct(Product product){
-        Product[] newProduct = Arrays.copyOf(products, products.length+1);
-        newProduct[newProduct.length - 1] = product;
-        products = newProduct;
-    }
+
 
     public void removeProduct(int numberDeleteProduct){
         this.getProducts()[numberDeleteProduct-1]=null;
@@ -56,7 +40,8 @@ public class BookProduct {
     @Override
     public String toString() {
         return "BookProduct{" +
-                "products=" + Arrays.toString(products) +
+                "scanner=" + scanner +
+                ", products=" + Arrays.toString(products) +
                 '}';
     }
 }
