@@ -36,6 +36,7 @@ public class HistoryBuyManager {
                     , products[j].getQuantity()
                     , products[j].getPrice());
         }
+        System.out.println();
         System.out.println("Выберите товар: ");
         int Product = scanner.nextInt();
         System.out.println("Выберите кол-во товара: ");
