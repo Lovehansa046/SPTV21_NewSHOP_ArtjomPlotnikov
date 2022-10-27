@@ -35,8 +35,8 @@ public class App {
     public void run() {
         boolean repeat = true;
         do {
-            System.out.println("=======================================");
-            System.out.println("=============== Задачи ================");
+            System.out.println("");
+            System.out.println("================= Задачи ===================");
             System.out.println("");
             System.out.println("===> (0)     Выйти из програм       (0) <===");
             System.out.println("===> (1)     Добавить продукт       (1) <===");
