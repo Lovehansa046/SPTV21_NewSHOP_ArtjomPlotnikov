@@ -33,7 +33,7 @@ public class BookProductManager {
 
     public void printListBookProduct(Product[] products) {
         for (int i = 0; i < products.length; i++) {
-            System.out.printf("%s %s %s %s"
+            System.out.printf("%s. Название продукта: %s \tКоличество: %s \tЦена продукта: %s"
                     ,i+1
                     ,products[i].getTitle()
                     ,products[i].getQuantity()

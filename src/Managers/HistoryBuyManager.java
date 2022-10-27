@@ -4,6 +4,7 @@ import Entity.Buyer;
 import Entity.HistoryBuy;
 import Entity.Product;
 
+import java.io.PrintStream;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
@@ -20,17 +21,17 @@ public class HistoryBuyManager {
     public HistoryBuy BuyProduct(Product[] products, Buyer[] buyers) {
         System.out.println(" Список покупателей: ");
         for (int i = 0; i < buyers.length; i++) {
-            System.out.printf("%d. %s %s. Телефон: %s%n"
+            System.out.printf("%d. %s %s. Телефон: %s%n\t"
                     , i + 1
                     , buyers[i].getFirstname()
                     , buyers[i].getLastname()
                     , buyers[i].getPhone());
         }
         System.out.println("Выберите покупателя: ");
-        int Buyer = scanner.nextInt();
+        int Buyer = scanner.nextInt(); scanner.nextLine();
         System.out.println("Список продуктов: ");
         for (int j = 0; j < products.length; j++) {
-            System.out.printf("%s %s %s %s"
+            System.out.printf("%s. Название продукта: %s \tКоличество: %s \tЦена продукта: %s"
                     , j + 1
                     , products[j].getTitle()
                     , products[j].getQuantity()
@@ -38,13 +39,16 @@ public class HistoryBuyManager {
         }
         System.out.println();
         System.out.println("Выберите товар: ");
-        int Product = scanner.nextInt();
+        int Product = scanner.nextInt(); scanner.nextLine();
         System.out.println("Выберите кол-во товара: ");
-        int QuantityProduct = scanner.nextInt();
+        int QuantityProduct = scanner.nextInt(); scanner.nextLine();
         int a = products[Product - 1].getQuantity();
         int b = products[Product - 1].getPrice();
         if (QuantityProduct > a) {
             System.out.println("На складе нет достаточного количества товара!");
+            TotalSummaProduct = b * QuantityProduct;
+            int ark = products[Product - 1].getQuantity() + QuantityProduct;
+            products[Product - 1].setQuantity(ark);
         } else {
             TotalSummaProduct = b * QuantityProduct;
             int ark = products[Product - 1].getQuantity() - QuantityProduct;
@@ -66,11 +70,20 @@ public class HistoryBuyManager {
     }
 
     public void printListBuys(HistoryBuy[] historyBuys) {
+//        for (int i = 0; i < historyBuys.length; i++) {
+//            System.out.printf("%s %s %s"
+//                    , historyBuys[i].getProduct()
+//                    , historyBuys[i].getBuyer()
+//                    , historyBuys[i].getBuyOnProduct());
+//        }
+//        System.out.println();
         for (int i = 0; i < historyBuys.length; i++) {
-            System.out.printf("%s %s %s"
-                    , historyBuys[i].getProduct()
-                    , historyBuys[i].getBuyer()
-                    , historyBuys[i].getBuyOnProduct());
+            System.out.print(i + 1 + ". " + historyBuys[i].getProduct().getTitle() + ". " + historyBuys[i].getProduct().getQuantity());
+            System.out.printf("%s %s %s",
+                    historyBuys[i].getBuyer().getFirstname(),
+                    historyBuys[i].getBuyer().getLastname(),
+                    historyBuys[i].getBuyer().getPhone());
+
         }
         System.out.println();
     }

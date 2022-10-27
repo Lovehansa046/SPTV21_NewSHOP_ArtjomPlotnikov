@@ -45,11 +45,10 @@ public class BuyerManager {
                     , buyers[i].getLastname()
                     , buyers[i].getPhone());
         }
-        int buyer = scanner.nextInt();
-        scanner.nextLine();
+        System.out.println("Введитк индекс покупателя: ");
+        int buyer = scanner.nextInt(); scanner.nextLine();
         System.out.println("Сколько денег?");
-        int addMoney = scanner.nextInt();
-        scanner.nextLine();
+        int addMoney = scanner.nextInt(); scanner.nextLine();
         int TotalMoney = buyers[buyer - 1].getCash() + addMoney;
         buyers[buyer - 1].setCash(TotalMoney);
         System.out.println("Счет пополнен!");
