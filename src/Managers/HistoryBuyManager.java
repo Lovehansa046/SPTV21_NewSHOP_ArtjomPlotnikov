@@ -11,6 +11,8 @@ import java.util.Scanner;
 public class HistoryBuyManager {
 
     private final Scanner scanner;
+    
+//     public static HistoryBuy historBuy = new HistoryBuy();
 
 
     public HistoryBuyManager() {
@@ -83,6 +85,8 @@ public class HistoryBuyManager {
                     historyBuys[i].getBuyer().getFirstname(),
                     historyBuys[i].getBuyer().getLastname(),
                     historyBuys[i].getBuyer().getPhone());
+            
+//            System.out.printf(i + 1 + ". " + historyBuy.getProduct() +  " - " + historyBuy.getBuyer() + " - " + historyBuy.getBuyoProduct() + " дата продажи продукта")
 
         }
         System.out.println();
