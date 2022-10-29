@@ -91,4 +91,8 @@ public class HistoryBuyManager {
         }
         System.out.println();
     }
+    
+//     public void cashMoneyShop() {
+       
+//     }
 }
