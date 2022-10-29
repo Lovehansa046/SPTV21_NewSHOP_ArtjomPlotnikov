@@ -87,7 +87,7 @@ public class App {
                     buyerManager.PrintCash(buyers);
                 case 9:
                     System.out.prtintln("<<< Прибыль магазина >>>")
-                    buyerManager.PrintCash(buyers);
+//                     buyerManager.PrintCash(buyers);
 
             }
 
