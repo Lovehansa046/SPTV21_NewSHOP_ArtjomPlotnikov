@@ -86,9 +86,11 @@ public class App {
                 case 8:
                     System.out.println("8. Посмотреть баланс");
                     buyerManager.PrintCash(buyers);
+                    break;
                 case 9:
                     System.out.println("9. Изменить данные о товаре");
                     bookProductManager.ProductChange(products);
+                    break;
 
             }
 

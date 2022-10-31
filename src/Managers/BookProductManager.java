@@ -49,18 +49,18 @@ public class BookProductManager {
         scanner.nextLine();
         System.out.print("Наименование продукта: ");
         System.out.println(products[ProductNumberValues - 1].getTitle());
-        System.out.print("Изменить название книги? (да/нет)");
+        System.out.print("Изменить название продукта? (да/нет)");
         String edit = scanner.nextLine();
         if (edit.equals("да")) {
-            System.out.print("Введите новое название книги: ");
+            System.out.print("Введите новое название продукта: ");
             products[ProductNumberValues - 1].setTitle(scanner.nextLine());
         }
         System.out.print("Изменить цену продукта: ");
         System.out.println(products[ProductNumberValues - 1].getPrice());
-        System.out.print("Изменить год издания книги? (да/нет)");
+        System.out.print("Изменить цену продукта? (да/нет)");
         edit = scanner.nextLine();
         if (edit.equals("да")) {
-            System.out.print("Введите новое название книги: ");
+            System.out.print("Введите новое цену продукта: ");
             products[ProductNumberValues - 1].setPrice(scanner.nextInt());
             scanner.nextLine();
         }
