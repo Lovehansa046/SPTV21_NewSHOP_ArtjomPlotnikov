@@ -47,6 +47,7 @@ public class App {
             System.out.println("===> (6) История покупок в магазине (6) <===");
             System.out.println("===> (7)     Пополнить счет         (7) <===");
             System.out.println("===> (8)    Посмотреть баланс       (8) <===");
+            System.out.println("===> (9)  Изменить данные о товаре  (9) <===");
             System.out.print("Выберите задачу: ");
             int task = scanner.nextInt();
             scanner.nextLine();
@@ -85,6 +86,9 @@ public class App {
                 case 8:
                     System.out.println("8. Посмотреть баланс");
                     buyerManager.PrintCash(buyers);
+                case 9:
+                    System.out.println("9. Изменить данные о товаре");
+                    bookProductManager.ProductChange(products);
 
             }
 

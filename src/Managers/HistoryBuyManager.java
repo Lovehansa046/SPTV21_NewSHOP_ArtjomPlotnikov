@@ -57,6 +57,8 @@ public class HistoryBuyManager {
                 int balance = buyers[Buyer - 1].getCash() - TotalSummaProduct;
                 buyers[Buyer - 1].setCash(balance);
                 System.out.println("Остаток на счету" + balance);
+
+
             }
         } else {
             System.out.println("На складе нет достаточного количества товара!");
@@ -78,13 +80,8 @@ public class HistoryBuyManager {
 //        }
 //        System.out.println();
         for (int i = 0; i < historyBuys.length; i++) {
-            System.out.print(i + 1 + ". " + historyBuys[i].getProduct().getTitle() + ". " + historyBuys[i].getProduct().getQuantity());
-            System.out.printf("%s %s %s",
-                    historyBuys[i].getBuyer().getFirstname(),
-                    historyBuys[i].getBuyer().getLastname(),
-                    historyBuys[i].getBuyer().getPhone());
-
-        }
-        System.out.println();
+                System.out.printf(i + 1 + ". " + "Покупатель: " + historyBuys[i].getBuyer() + "Дата покупки: " + historyBuys[i].getBuyOnProduct() + "Продукт: " + historyBuys[i].getProduct());
+            }
+        System.out.println("хай");
     }
 }

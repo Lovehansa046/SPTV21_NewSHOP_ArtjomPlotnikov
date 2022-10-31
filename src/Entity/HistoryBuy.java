@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class HistoryBuy {
 
-    Product product;
-    Buyer buyer;
-    Date BuyOnProduct;
+    private Product product;
+    private Buyer buyer;
+    private Date BuyOnProduct;
 
     public HistoryBuy() {
     }
