@@ -47,6 +47,7 @@ public class App {
             System.out.println("===> (6) История покупок в магазине (6) <===");
             System.out.println("===> (7)     Пополнить счет         (7) <===");
             System.out.println("===> (8)    Посмотреть баланс       (8) <===");
+            System.out.println("===> (9)  Изменить данные о товаре  (9) <===");
             System.out.print("Выберите задачу: ");
             int task = scanner.nextInt();
             scanner.nextLine();
@@ -55,39 +56,39 @@ public class App {
                     repeat = false;
                     break;
                 case 1:
-                    System.out.println("<<< Добавить продукт >>>");
+                    System.out.println("1. Добавить продукт");
                     addProduct(bookProductManager.createBookProduct());
                     break;
                 case 2:
-                    System.out.println("<<< Добавить покупателя >>>");
+                    System.out.println("2. Добавить покупателя");
                     addBuyer(buyerManager.newBuyer());
                     break;
                 case 3:
-                    System.out.println("<<< Список продуктов >>>");
+                    System.out.println("3. Список продуктов");
                     bookProductManager.printListBookProduct(products);
                     break;
                 case 4:
-                    System.out.println("<<< Список покупателей >>>");
+                    System.out.println("4. Список покупателей");
                     buyerManager.printListBuyer(buyers);
                     break;
                 case 5:
-                    System.out.println("<<< Купить товар >>>");
+                    System.out.println("5. Купить товар");
                     historyBuyManager.BuyProduct(products, buyers);
                     break;
                 case 6:
-                    System.out.println("<<< История покупок в магазине >>>");
+                    System.out.println("6. История покупок в магазине");
                     historyBuyManager.printListBuys(historyBuys);
                     break;
                 case 7:
-                    System.out.println("<<< Пополнить счет >>>");
+                    System.out.println("7. Пополнить счет");
                     buyerManager.Refill(buyers);
                     break;
                 case 8:
-                    System.out.println("<<< Посмотреть баланс покупателя >>>");
+                    System.out.println("8. Посмотреть баланс");
                     buyerManager.PrintCash(buyers);
                 case 9:
-                    System.out.prtintln("<<< Прибыль магазина >>>")
-//                     buyerManager.PrintCash(buyers);
+                    System.out.println("9. Изменить данные о товаре");
+                    bookProductManager.ProductChange(products);
 
             }
 
