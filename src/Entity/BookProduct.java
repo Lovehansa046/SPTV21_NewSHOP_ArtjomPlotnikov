@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class BookProduct {
 
-    Scanner scanner;
+    private final Scanner scanner;
     Product[] products;
 
     public Product[] getProducts() {

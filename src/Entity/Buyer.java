@@ -2,11 +2,11 @@ package Entity;
 
 public class Buyer {
 
-    String firstname;
-    String lastname;
-    String phone;
+    private String firstname;
+    private String lastname;
+    private String phone;
 
-    int Cash;
+    private int Cash;
 
     public Buyer(){
     }
