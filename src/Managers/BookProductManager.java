@@ -49,7 +49,7 @@ public class BookProductManager {
         scanner.nextLine();
         System.out.print("Наименование продукта: ");
         System.out.println(products[ProductNumberValues - 1].getTitle());
-        System.out.print("Изменить название продукта? (да/нет)");
+        System.out.print("Изменить название продукта ? (да/нет)");
         String edit = scanner.nextLine();
         if (edit.equals("да")) {
             System.out.print("Введите новое название продукта: ");

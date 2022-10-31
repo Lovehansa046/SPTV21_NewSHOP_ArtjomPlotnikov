@@ -4,7 +4,6 @@ import Entity.Buyer;
 import Entity.HistoryBuy;
 import Entity.Product;
 
-import java.io.PrintStream;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 

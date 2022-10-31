@@ -4,6 +4,7 @@ import Entity.BookProduct;
 import Entity.Buyer;
 import Entity.HistoryBuy;
 import Entity.Product;
+import Entity.BookProduct;
 import Managers.BookProductManager;
 import Managers.BuyerManager;
 import Managers.HistoryBuyManager;
@@ -22,6 +23,8 @@ public class App {
     private final BookProductManager bookProductManager;
     private final HistoryBuyManager historyBuyManager;
 
+    private final BookProduct bookProduct;
+
     public App(){
         scanner = new Scanner(System.in);
         buyers = new Buyer[0];
@@ -30,6 +33,7 @@ public class App {
         buyerManager = new BuyerManager();
         bookProductManager = new BookProductManager();
         historyBuyManager = new HistoryBuyManager();
+        bookProduct = new BookProduct();
     }
 
     public void run() {
@@ -91,6 +95,9 @@ public class App {
                     System.out.println("9. Изменить данные о товаре");
                     bookProductManager.ProductChange(products);
                     break;
+                case 10:
+                    System.out.println("10. Удаление продукта");
+                    bookProduct.removeProduct();
 
             }
 

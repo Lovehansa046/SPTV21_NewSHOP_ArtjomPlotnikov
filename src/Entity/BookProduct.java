@@ -2,6 +2,7 @@ package Entity;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import Managers.BookProductManager;
 
 public class BookProduct {
 
@@ -21,7 +22,16 @@ public class BookProduct {
     }
 
 
-    public void removeProduct(int numberDeleteProduct){
+    public void removeProduct(){
+        for (int i = 0; i < products.length; i++) {
+            System.out.printf("%d. Название продукта: %s Количество: %s Цена продукта: %s%n"
+                    , i + 1
+                    , products[i].getTitle()
+                    , products[i].getQuantity()
+                    , products[i].getPrice());
+        }
+        System.out.print("Введите номер продукта который надо удалить: ");
+        int numberDeleteProduct = scanner.nextInt(); scanner.nextLine();
         this.getProducts()[numberDeleteProduct-1]=null;
         //создаем массив с количеством элементов на 1 меньше
         Product[] newProduct = new Product[this.getProducts().length-1];
