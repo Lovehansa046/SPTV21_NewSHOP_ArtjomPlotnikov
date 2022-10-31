@@ -52,6 +52,8 @@ public class App {
             System.out.println("===> (7)     Пополнить счет         (7) <===");
             System.out.println("===> (8)    Посмотреть баланс       (8) <===");
             System.out.println("===> (9)  Изменить данные о товаре  (9) <===");
+            System.out.println("===> (10)    Удаление продукта     (10) <===");
+
             System.out.print("Выберите задачу: ");
             int task = scanner.nextInt();
             scanner.nextLine();
