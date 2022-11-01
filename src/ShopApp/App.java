@@ -4,10 +4,11 @@ import Entity.BookProduct;
 import Entity.Buyer;
 import Entity.HistoryBuy;
 import Entity.Product;
-import Entity.BookProduct;
+import Entity.Shop;
 import Managers.BookProductManager;
 import Managers.BuyerManager;
 import Managers.HistoryBuyManager;
+import Managers.ShopManagers;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -17,11 +18,15 @@ public class App {
     private final Scanner scanner;
     private Buyer[] buyers;
 
+    private Shop[] shops;
+
     private Product[] products;
-    private final HistoryBuy[] historyBuys;
+    private HistoryBuy[] historyBuys;
     private final BuyerManager buyerManager;
     private final BookProductManager bookProductManager;
     private final HistoryBuyManager historyBuyManager;
+
+    private final ShopManagers shopManagers;
 
     private final BookProduct bookProduct;
 
@@ -34,6 +39,8 @@ public class App {
         bookProductManager = new BookProductManager();
         historyBuyManager = new HistoryBuyManager();
         bookProduct = new BookProduct();
+        shopManagers = new ShopManagers();
+        shops = new Shop[0];
     }
 
     public void run() {
@@ -53,6 +60,7 @@ public class App {
             System.out.println("===> (8)    Посмотреть баланс       (8) <===");
             System.out.println("===> (9)  Изменить данные о товаре  (9) <===");
             System.out.println("===> (10)    Удаление продукта     (10) <===");
+            System.out.println("===> (11)    Прибыль магазина      (11) <===");
 
             System.out.print("Выберите задачу: ");
             int task = scanner.nextInt();
@@ -80,6 +88,8 @@ public class App {
                 case 5:
                     System.out.println("5. Купить товар");
                     historyBuyManager.BuyProduct(products, buyers);
+                    addCashShop(shopManagers.createShopList());
+                    addHistoryShop(historyBuyManager.createStoryList(products,buyers));
                     break;
                 case 6:
                     System.out.println("6. История покупок в магазине");
@@ -100,6 +110,10 @@ public class App {
                 case 10:
                     System.out.println("10. Удаление продукта");
                     bookProduct.removeProduct();
+                    break;
+                case 11:
+                    System.out.println("11. Прибыль магазина");
+                    shopManagers.ShopCashList(shops);
 
             }
 
@@ -118,5 +132,15 @@ public class App {
         this.buyers = Arrays.copyOf(this.buyers, this.buyers.length + 1);
         this.buyers[this.buyers.length  - 1] = buyer;
     }
+    private void addCashShop(Shop shop){
+        this.shops = Arrays.copyOf(this.shops, this.shops.length + 1);
+        this.shops[this.shops.length  - 1] = shop;
+    }
+
+    private void addHistoryShop(HistoryBuy historyBuy){
+        this.historyBuys = Arrays.copyOf(this.historyBuys, this.historyBuys.length + 1);
+        this.historyBuys[this.historyBuys.length  - 1] = historyBuy;
+    }
+
 
 }

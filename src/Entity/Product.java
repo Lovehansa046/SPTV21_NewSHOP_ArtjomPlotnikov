@@ -7,7 +7,6 @@ public class Product {
 
     private String title;
 
-//    private Buyer[] buyers;
     private int quantity;
     private int price;
 

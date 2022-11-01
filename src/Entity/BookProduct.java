@@ -2,11 +2,11 @@ package Entity;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import Managers.BookProductManager;
+
 
 public class BookProduct {
 
-    private Scanner scanner;
+    private final Scanner scanner;
     Product[] products;
 
     public Product[] getProducts() {
@@ -19,6 +19,7 @@ public class BookProduct {
 
     public BookProduct() {
         products = new Product[0];
+        scanner = new Scanner(System.in);
     }
 
 

@@ -1,23 +1,16 @@
 package Entity;
 
+import Managers.HistoryBuyManager;
+
 import java.util.Date;
 
 public class HistoryBuy {
-
-    private Product product;
     private Buyer buyer;
     private Date BuyOnProduct;
 
     public HistoryBuy() {
     }
 
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 
     public Buyer getBuyer() {
         return buyer;
@@ -35,12 +28,42 @@ public class HistoryBuy {
         BuyOnProduct = buyOnProduct;
     }
 
+    String HistoryProductName;
+    String HistoryProductPrice;
+    String HistoryProductQantity;
+
+    public String getHistoryProductName() {
+        return HistoryProductName;
+    }
+
+    public void setHistoryProductName(String historyProductName) {
+        HistoryProductName = historyProductName;
+    }
+
+    public String getHistoryProductPrice() {
+        return HistoryProductPrice;
+    }
+
+    public void setHistoryProductPrice(String historyProductPrice) {
+        HistoryProductPrice = historyProductPrice;
+    }
+
+    public String getHistoryProductQantity() {
+        return HistoryProductQantity;
+    }
+
+    public void setHistoryProductQantity(String historyProductQantity) {
+        HistoryProductQantity = historyProductQantity;
+    }
+
     @Override
     public String toString() {
         return "HistoryBuy{" +
-                "product=" + product +
-                ", buyer=" + buyer +
+                "buyer=" + buyer +
                 ", BuyOnProduct=" + BuyOnProduct +
+                ", HistoryProductName='" + HistoryProductName + '\'' +
+                ", HistoryProductPrice='" + HistoryProductPrice + '\'' +
+                ", HistoryProductQantity='" + HistoryProductQantity + '\'' +
                 '}';
     }
 }

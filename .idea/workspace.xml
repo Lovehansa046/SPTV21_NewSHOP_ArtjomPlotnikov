@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36893275-5a0c-4307-924d-12b6b64295fe" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/Entity/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Managers/ShopManagers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/BookProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/BookProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/BookProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Managers/BookProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/HistoryBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HistoryBuy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Managers/BuyerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Managers/BuyerManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Managers/HistoryBuyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Managers/HistoryBuyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ShopApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShopApp/App.java" afterDir="false" />
     </list>
@@ -107,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667249768935</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update">
+      <created>1667250170700</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1667250170700</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update">
+      <created>1667250238610</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1667250238610</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
