@@ -10,6 +10,8 @@ import Managers.BuyerManager;
 import Managers.HistoryBuyManager;
 import Managers.ShopManagers;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -29,6 +31,7 @@ public class App {
     private final ShopManagers shopManagers;
 
     private final BookProduct bookProduct;
+    private HistoryBuy historyBuy;
 
     public App(){
         scanner = new Scanner(System.in);
@@ -43,7 +46,7 @@ public class App {
         shops = new Shop[0];
     }
 
-    public void run() {
+    public void run() throws IOException {
         boolean repeat = true;
         do {
             System.out.println("");

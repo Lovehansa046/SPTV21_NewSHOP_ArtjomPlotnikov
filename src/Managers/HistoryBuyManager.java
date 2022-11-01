@@ -3,8 +3,9 @@ package Managers;
 import Entity.Buyer;
 import Entity.HistoryBuy;
 import Entity.Product;
-import Entity.Shop;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
@@ -88,7 +89,7 @@ public class HistoryBuyManager {
         System.out.println();
     }
 
-    public HistoryBuy createStoryList(Product[] products, Buyer[] buyers){
+    public HistoryBuy createStoryList(Product[] products, Buyer[] buyers) throws IOException {
 
         String historyProduct = String.valueOf(products[Product-1].getTitle());
 
@@ -98,7 +99,20 @@ public class HistoryBuyManager {
         historyBuy.setHistoryProductQantity(String.valueOf(QuantityProduct_final));
         historyBuy.setBuyer(buyers[Buyer - 1]);
         historyBuy.setBuyOnProduct(new GregorianCalendar().getTime());
+//        FileWrite();
+
         return historyBuy;
     }
+//    public void FileWrite() throws IOException {
+//        HistoryBuy historyBuy = new HistoryBuy();
+//        FileWriter fw = new FileWriter("История покупок.txt");
+//        fw.write(historyBuy.getHistoryProductName());
+//        fw.write(historyBuy.getHistoryProductPrice());
+//        fw.write(historyBuy.getHistoryProductQantity());
+//        fw.write(String.valueOf(historyBuy.getBuyer()));
+//        fw.write(String.valueOf(historyBuy.getBuyOnProduct()));
+//        fw.close();
+//    }
+
 
 }
