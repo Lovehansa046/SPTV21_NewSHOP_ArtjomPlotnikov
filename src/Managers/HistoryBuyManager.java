@@ -99,20 +99,15 @@ public class HistoryBuyManager {
         historyBuy.setHistoryProductQantity(String.valueOf(QuantityProduct_final));
         historyBuy.setBuyer(buyers[Buyer - 1]);
         historyBuy.setBuyOnProduct(new GregorianCalendar().getTime());
-//        FileWrite();
+        FileWriter fw = new FileWriter("История покупок.txt");
+        fw.write("Название продукта: " + historyBuy.getHistoryProductName() + " - ");
+        fw.write("Цена продукта: " + historyBuy.getHistoryProductPrice() + " - ");
+        fw.write("Количество продукта: " + historyBuy.getHistoryProductQantity() + " - ");
+        fw.write("Данные покупателя: " + (historyBuy.getBuyer()) + " - ");
+        fw.write("Время покупки: " + (historyBuy.getBuyOnProduct()));
+        fw.close();
+
 
         return historyBuy;
     }
-//    public void FileWrite() throws IOException {
-//        HistoryBuy historyBuy = new HistoryBuy();
-//        FileWriter fw = new FileWriter("История покупок.txt");
-//        fw.write(historyBuy.getHistoryProductName());
-//        fw.write(historyBuy.getHistoryProductPrice());
-//        fw.write(historyBuy.getHistoryProductQantity());
-//        fw.write(String.valueOf(historyBuy.getBuyer()));
-//        fw.write(String.valueOf(historyBuy.getBuyOnProduct()));
-//        fw.close();
-//    }
-
-
 }

@@ -7,8 +7,6 @@
     <list default="true" id="36893275-5a0c-4307-924d-12b6b64295fe" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Managers/HistoryBuyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Managers/HistoryBuyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShopApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShopApp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShopApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShopApp/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667293305724</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update">
+      <created>1667321776630</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1667321776630</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
