@@ -1,8 +1,7 @@
-package Managers;
+package managers;
 
 
-import Entity.Product;
-import Entity.Shop;
+import entity.Shop;
 
 
 public class ShopManagers {

@@ -1,6 +1,4 @@
-package Entity;
-
-import Managers.HistoryBuyManager;
+package entity;
 
 import java.util.Date;
 
@@ -31,6 +29,33 @@ public class HistoryBuy {
     String HistoryProductName;
     String HistoryProductPrice;
     String HistoryProductQantity;
+    String buyerNames;
+    String buyerLastNames;
+    String buyerPhones;
+
+    public String getBuyerNames() {
+        return buyerNames;
+    }
+
+    public void setBuyerNames(String buyerNames) {
+        this.buyerNames = buyerNames;
+    }
+
+    public String getBuyerLastNames() {
+        return buyerLastNames;
+    }
+
+    public void setBuyerLastNames(String buyerLastNames) {
+        this.buyerLastNames = buyerLastNames;
+    }
+
+    public String getBuyerPhones() {
+        return buyerPhones;
+    }
+
+    public void setBuyerPhones(String buyerPhones) {
+        this.buyerPhones = buyerPhones;
+    }
 
     public String getHistoryProductName() {
         return HistoryProductName;
@@ -64,6 +89,10 @@ public class HistoryBuy {
                 ", HistoryProductName='" + HistoryProductName + '\'' +
                 ", HistoryProductPrice='" + HistoryProductPrice + '\'' +
                 ", HistoryProductQantity='" + HistoryProductQantity + '\'' +
+                ", buyerName='" + buyerNames + '\'' +
+                ", buyerLastName='" + buyerLastNames + '\'' +
+                ", buyerPhone='" + buyerPhones + '\'' +
                 '}';
     }
+
 }

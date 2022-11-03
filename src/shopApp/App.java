@@ -1,16 +1,15 @@
-package ShopApp;
+package shopApp;
 
-import Entity.BookProduct;
-import Entity.Buyer;
-import Entity.HistoryBuy;
-import Entity.Product;
-import Entity.Shop;
-import Managers.BookProductManager;
-import Managers.BuyerManager;
-import Managers.HistoryBuyManager;
-import Managers.ShopManagers;
+import entity.BookProduct;
+import entity.Buyer;
+import entity.HistoryBuy;
+import entity.Product;
+import entity.Shop;
+import managers.BookProductManager;
+import managers.BuyerManager;
+import managers.HistoryBuyManager;
+import managers.ShopManagers;
 
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -82,6 +81,7 @@ public class App {
                     break;
                 case 3:
                     System.out.println("3. Список продуктов");
+                    System.out.println("=====================================");
                     bookProductManager.printListBookProduct(products);
                     break;
                 case 4:

@@ -1,4 +1,4 @@
-package ShopApp;
+package shopApp;
 
 import java.io.IOException;
 

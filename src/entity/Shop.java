@@ -1,7 +1,5 @@
-package Entity;
+package entity;
 
-
-import Managers.HistoryBuyManager;
 
 public class Shop {
 

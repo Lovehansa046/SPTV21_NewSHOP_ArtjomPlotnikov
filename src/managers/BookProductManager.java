@@ -1,6 +1,6 @@
-package Managers;
+package managers;
 
-import Entity.Product;
+import entity.Product;
 
 import java.util.Scanner;
 
@@ -39,14 +39,13 @@ public class BookProductManager {
                     , products[i].getQuantity()
                     , products[i].getPrice());
         }
-        System.out.println();
+        System.out.println("=====================================");
     }
 
     public void ProductChange(Product[] products) {
         printListBookProduct(products);
         System.out.print("Выберите номер продукта для редактирования: ");
-        int ProductNumberValues = scanner.nextInt();
-        scanner.nextLine();
+        int ProductNumberValues = scanner.nextInt();scanner.nextLine();
         System.out.print("Наименование продукта: ");
         System.out.println(products[ProductNumberValues - 1].getTitle());
         System.out.print("Изменить название продукта ? (да/нет)");

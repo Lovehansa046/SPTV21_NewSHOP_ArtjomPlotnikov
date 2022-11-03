@@ -1,8 +1,8 @@
-package Managers;
+package managers;
 
-import Entity.Buyer;
-import Entity.HistoryBuy;
-import Entity.Product;
+import entity.Buyer;
+import entity.HistoryBuy;
+import entity.Product;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,7 +17,10 @@ public class HistoryBuyManager {
     public static int Product;
     public static int Buyer;
     public static int QuantityProduct_final;
+    String fileName = "История покупок.txt";
+
 //    public static int[] HistoryProduct;
+
 
     public HistoryBuyManager() {
         scanner = new Scanner(System.in);
@@ -33,8 +36,9 @@ public class HistoryBuyManager {
                     , buyers[i].getPhone());
         }
         System.out.print("Выберите покупателя: ");
-//        int
         Buyer = scanner.nextInt(); scanner.nextLine();
+
+        System.out.println("=====================================");
         System.out.println("Список продуктов: ");
         for (int j = 0; j < products.length; j++) {
             System.out.printf("%d. Название продукта: %s%n Количество: %s%n Цена продукта: %s%n"
@@ -43,34 +47,43 @@ public class HistoryBuyManager {
                     , products[j].getQuantity()
                     , products[j].getPrice());
         }
-        System.out.println();
+        System.out.println("=====================================");
         System.out.print("Выберите товар: ");
 
-//        int
         Product = scanner.nextInt(); scanner.nextLine();
 
+        System.out.println("=====================================");
         System.out.print("Выберите кол-во товара: ");
 
-        int QuantityProduct = scanner.nextInt(); scanner.nextLine();
+        int quantityProduct = scanner.nextInt(); scanner.nextLine();
         int a = products[Product - 1].getQuantity();
         int b = products[Product - 1].getPrice();
 
-        if (QuantityProduct <= a) {
-            int TotalSummaProduct = b * QuantityProduct;
+        if (quantityProduct <= a) {
+            int TotalSummaProduct = b * quantityProduct;
             if (TotalSummaProduct > buyers[Buyer - 1].getCash()) {
+
+                System.out.println("=====================================");
                 System.out.println("У вас недостаточно средст для совершения данной покупки!");
+                System.out.println("=====================================");
+
             } else {
                 int balance = buyers[Buyer - 1].getCash() - TotalSummaProduct;
                 buyers[Buyer - 1].setCash(balance);
-                int ark = products[Product - 1].getQuantity() - QuantityProduct;
+                int ark = products[Product - 1].getQuantity() - quantityProduct;
                 products[Product - 1].setQuantity(ark);
                 TotalSumma = TotalSummaProduct;
-                QuantityProduct_final = QuantityProduct;
+                QuantityProduct_final = quantityProduct;
 
+                System.out.println("=====================================");
                 System.out.println("Остаток на счету: " + balance);
+                System.out.println("=====================================");
             }
         } else {
+
+            System.out.println("=====================================");
             System.out.println("На складе нет достаточного количества товара!");
+            System.out.println("=====================================");
         }
 
 
@@ -92,22 +105,33 @@ public class HistoryBuyManager {
     public HistoryBuy createStoryList(Product[] products, Buyer[] buyers) throws IOException {
 
         String historyProduct = String.valueOf(products[Product-1].getTitle());
+        String historyBuyerName = (buyers[Buyer-1].getFirstname());
+        String historyBuyerLastName = (buyers[Buyer-1].getLastname());
+        String historyBuyerPhone = String.valueOf(buyers[Buyer-1].getPhone());
+
 
         HistoryBuy historyBuy = new HistoryBuy();
         historyBuy.setHistoryProductName(historyProduct);
         historyBuy.setHistoryProductPrice(String.valueOf(TotalSumma));
         historyBuy.setHistoryProductQantity(String.valueOf(QuantityProduct_final));
-        historyBuy.setBuyer(buyers[Buyer - 1]);
+        historyBuy.setBuyer(buyers[Buyer-1]);
+        historyBuy.setBuyerNames(historyBuyerName);
+        historyBuy.setBuyerLastNames(historyBuyerLastName);
+        historyBuy.setBuyerPhones(historyBuyerPhone);
         historyBuy.setBuyOnProduct(new GregorianCalendar().getTime());
-        FileWriter fw = new FileWriter("История покупок.txt");
-        fw.write("Название продукта: " + historyBuy.getHistoryProductName() + " - ");
-        fw.write("Цена продукта: " + historyBuy.getHistoryProductPrice() + " - ");
-        fw.write("Количество продукта: " + historyBuy.getHistoryProductQantity() + " - ");
-        fw.write("Данные покупателя: " + (historyBuy.getBuyer()) + " - ");
-        fw.write("Время покупки: " + (historyBuy.getBuyOnProduct()));
-        fw.close();
+
+        FileWriter line = new FileWriter(fileName, true);
+        line.append("Название продукта: ").append(historyBuy.getHistoryProductName()).append(" - ");
+        line.append("Цена продукта: ").append(historyBuy.getHistoryProductPrice()).append(" - ");
+        line.append("Количество продукта: ").append(historyBuy.getHistoryProductQantity()).append(" - ");
+        line.append("Данные покупателя: ").append(historyBuy.getBuyerNames()).append(' ').append(historyBuy.getBuyerLastNames()).append(" Номер телефона: ").append(historyBuy.getBuyerPhones()).append(" - ");
+        line.append("Время покупки: ").append(String.valueOf(historyBuy.getBuyOnProduct()));
+        line.append("\n");
+        line.close();
+
 
 
         return historyBuy;
     }
+
 }

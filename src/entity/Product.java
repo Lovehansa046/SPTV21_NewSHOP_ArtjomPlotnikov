@@ -1,6 +1,4 @@
-package Entity;
-
-import java.util.Arrays;
+package entity;
 
 public class Product {
 

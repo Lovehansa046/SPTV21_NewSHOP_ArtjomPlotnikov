@@ -1,6 +1,6 @@
-package Managers;
+package managers;
 
-import Entity.Buyer;
+import entity.Buyer;
 
 import java.util.Scanner;
 
@@ -35,8 +35,11 @@ public class BuyerManager {
     }
 
     public void Refill(Buyer[] buyers) {
+        System.out.println("=====================================");
         System.out.println("Выберите покупателя для зачисления на его счет денежных средств");
-        System.out.println("список покупателей");
+        System.out.println("=====================================");
+        System.out.println("Список покупателей");
+        System.out.println("=====================================");
         for (int i = 0; i < buyers.length; i++) {
             System.out.printf("%d. %s %s. Телефон: %s%n"
                     , i + 1
@@ -50,8 +53,11 @@ public class BuyerManager {
         int addMoney = scanner.nextInt(); scanner.nextLine();
         int TotalMoney = buyers[buyer - 1].getCash() + addMoney;
         buyers[buyer - 1].setCash(TotalMoney);
+        System.out.println("=====================================");
         System.out.println("Счет пополнен!");
+        System.out.println("=====================================");
         System.out.println("На счету на данный момент: " + buyers[buyer - 1].getCash());
+        System.out.println("=====================================");
 
     }
     public void PrintCash(Buyer[] buyers){
@@ -66,6 +72,8 @@ public class BuyerManager {
         System.out.print("Введите индекс покупателя, чтобы посмотреть его баланс: ");
         int balans = scanner.nextInt(); scanner.nextLine();
         int printCash = buyers[balans-1].getCash();
+        System.out.println("=====================================");
         System.out.println("Баланс данного покупателя: " + printCash);
+        System.out.println("=====================================");
     }
 }
