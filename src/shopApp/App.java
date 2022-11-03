@@ -81,12 +81,11 @@ public class App {
                     break;
                 case 3:
                     System.out.println("3. Список продуктов");
-                    System.out.println("=====================================");
-                    bookProductManager.printListBookProduct(products);
+                    bookProductManager.printListBookProduct();
                     break;
                 case 4:
                     System.out.println("4. Список покупателей");
-                    buyerManager.printListBuyer(buyers);
+                    buyerManager.printListBuyer();
                     break;
                 case 5:
                     System.out.println("5. Купить товар");
@@ -96,7 +95,7 @@ public class App {
                     break;
                 case 6:
                     System.out.println("6. История покупок в магазине");
-                    historyBuyManager.printListBuys(historyBuys);
+                    historyBuyManager.printHistoryBuys();
                     break;
                 case 7:
                     System.out.println("7. Пополнить счет");

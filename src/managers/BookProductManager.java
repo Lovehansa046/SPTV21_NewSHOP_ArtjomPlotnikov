@@ -2,17 +2,22 @@ package managers;
 
 import entity.Product;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class BookProductManager {
 
     Scanner scanner;
+    File fileNames = new File("Список продуктов.txt");
 
     public BookProductManager() {
         scanner = new Scanner(System.in);
     }
 
-    public Product createBookProduct() {
+    public Product createBookProduct() throws IOException {
         System.out.print("Введите название продукта: ");
         String productName = scanner.nextLine();
         System.out.print("Введите количество продуктов: ");
@@ -23,15 +28,43 @@ public class BookProductManager {
         return product;
     }
 
-    public Product createProduct(String productName, int quantity, int price) {
+    public Product createProduct(String productName, int quantity, int price) throws IOException {
         Product product = new Product();
         product.setTitle(productName);
         product.setQuantity(quantity);
         product.setPrice(price);
+
+        FileWriter line = new FileWriter(fileNames, true);
+        line.append("Название продукта: ").append(product.getTitle()).append(" - ");
+        line.append("Цена продукта: ").append(String.valueOf(product.getQuantity())).append(" - ");
+        line.append("Количество продукта: ").append(String.valueOf(product.getPrice()));
+        line.append("\n");
+        line.close();
+
         return product;
     }
 
-    public void printListBookProduct(Product[] products) {
+
+    public void printListBookProduct() throws FileNotFoundException {
+
+        System.out.println("=====================================");
+        printFileProduct();
+        System.out.println("=====================================");
+    }
+
+    public void printFileProduct() throws FileNotFoundException {
+        File doc = new File("Список продуктов.txt");
+        Scanner obj = new Scanner(doc);
+
+        while (obj.hasNextLine())
+            System.out.println(obj.nextLine());
+
+        System.out.println();
+    }
+
+
+    public void ProductChange(Product[] products) {
+        System.out.println("=====================================");
         for (int i = 0; i < products.length; i++) {
             System.out.printf("%d. Название продукта: %s Количество: %s Цена продукта: %s%n"
                     , i + 1
@@ -40,10 +73,6 @@ public class BookProductManager {
                     , products[i].getPrice());
         }
         System.out.println("=====================================");
-    }
-
-    public void ProductChange(Product[] products) {
-        printListBookProduct(products);
         System.out.print("Выберите номер продукта для редактирования: ");
         int ProductNumberValues = scanner.nextInt();scanner.nextLine();
         System.out.print("Наименование продукта: ");

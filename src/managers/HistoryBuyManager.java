@@ -4,6 +4,8 @@ import entity.Buyer;
 import entity.HistoryBuy;
 import entity.Product;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.GregorianCalendar;
@@ -19,7 +21,7 @@ public class HistoryBuyManager {
     public static int QuantityProduct_final;
     String fileName = "История покупок.txt";
 
-//    public static int[] HistoryProduct;
+
 
 
     public HistoryBuyManager() {
@@ -89,16 +91,13 @@ public class HistoryBuyManager {
 
     }
 
-    public void printListBuys(HistoryBuy[] historyBuys) {
-        for (int i = 0; i < historyBuys.length; i++) {
-            System.out.printf("%d. Название продукта: %s%n Цена продукта: %s%n Количество продукта: %s%n Данные покупателя: %s%n Дата покупки: %s%n"
-                    , i + 1
-                    , historyBuys[i].getHistoryProductName()
-                    , historyBuys[i].getHistoryProductPrice()
-                    , historyBuys[i].getHistoryProductQantity()
-                    , historyBuys[i].getBuyer()
-                    , historyBuys[i].getBuyOnProduct());
-        }
+    public void printHistoryBuys() throws FileNotFoundException {
+        File doc = new File("История покупок.txt");
+        Scanner obj = new Scanner(doc);
+
+        while (obj.hasNextLine())
+            System.out.println(obj.nextLine());
+
         System.out.println();
     }
 

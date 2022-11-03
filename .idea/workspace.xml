@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="36893275-5a0c-4307-924d-12b6b64295fe" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/BookProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BookProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Buyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Buyer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HistoryBuy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/HistoryBuy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/BookProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BookProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/BuyerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BuyerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/HistoryBuyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/HistoryBuyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/ShopManagers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/ShopManagers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShopApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shopApp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShopApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shopApp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/BookProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BookProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/BuyerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BuyerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/HistoryBuyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/HistoryBuyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shopApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shopApp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/История покупок.txt" beforeDir="false" afterPath="$PROJECT_DIR$/История покупок.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667321776630</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update">
+      <created>1667476265415</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1667476265415</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
