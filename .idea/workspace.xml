@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="36893275-5a0c-4307-924d-12b6b64295fe" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/managers/BookProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BookProductManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/managers/BuyerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BuyerManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Список покупателей.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Список покупателей.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Список продуктов.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Список продуктов.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mlc04/OneDrive - Ida-Virumaa Kutsehariduskeskus/Рабочий стол/JetBrains/SPTV21_HomeWork1_ArtjomPlotnikov&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/mlc04/OneDrive - Ida-Virumaa Kutsehariduskeskus/Рабочий стол/JetBrains/SHOP"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -156,8 +155,18 @@
       <option name="project" value="LOCAL" />
       <updated>1667478960451</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update">
+      <created>1667479854081</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1667479854081</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

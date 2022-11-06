@@ -2,16 +2,13 @@ package managers;
 
 import entity.Product;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class BookProductManager {
 
     Scanner scanner;
-    File fileNames = new File("Список продуктов.txt");
+    File fileNames = new File("Список продуктов.csv");
 
     public BookProductManager() {
         scanner = new Scanner(System.in);
