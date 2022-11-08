@@ -7,7 +7,7 @@
     <list default="true" id="36893275-5a0c-4307-924d-12b6b64295fe" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/managers/BookProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BookProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/managers/BuyerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/managers/BuyerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Список покупателей.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Список покупателей.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +38,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/mlc04/OneDrive - Ida-Virumaa Kutsehariduskeskus/Рабочий стол/JetBrains/SHOP"
+    "last_opened_file_path": "C:/Users/mlc04/OneDrive - Ida-Virumaa Kutsehariduskeskus/Рабочий стол/JetBrains/SHOP",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -162,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667479854081</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update">
+      <created>1667746424192</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1667746424192</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="UnknownFeatures">

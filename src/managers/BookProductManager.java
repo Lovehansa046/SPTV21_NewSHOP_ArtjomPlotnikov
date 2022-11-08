@@ -3,12 +3,14 @@ package managers;
 import entity.Product;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BookProductManager {
 
     Scanner scanner;
-    File fileNames = new File("Список продуктов.csv");
+    File fileNames = new File("Список продуктов.txt");
 
     public BookProductManager() {
         scanner = new Scanner(System.in);
@@ -32,9 +34,16 @@ public class BookProductManager {
         product.setPrice(price);
 
         FileWriter line = new FileWriter(fileNames, true);
-        line.append("Название продукта: ").append(product.getTitle()).append(" - ");
-        line.append("Цена продукта: ").append(String.valueOf(product.getQuantity())).append(" - ");
-        line.append("Количество продукта: ").append(String.valueOf(product.getPrice()));
+        line.append("-------------------");
+        line.append("\n");
+        line.append("Name product: ");
+        line.write(product.getTitle());
+        line.append("\n");
+        line.append("Price product: ");
+        line.write(String.valueOf(product.getQuantity()));
+        line.append("\n");
+        line.append("Quantity product: ");
+        line.write(String.valueOf(product.getPrice()));
         line.append("\n");
         line.close();
 
